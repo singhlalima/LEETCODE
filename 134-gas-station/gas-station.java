@@ -4,7 +4,6 @@ class Solution {
         int idx[] = new int[n];
         int total = 0;   // overall balance of gas
         int tank = 0;    // current tank balance
-        int j = 0;
         int count = 0;
         int start = 0;   // candidate start index
 
@@ -21,8 +20,7 @@ class Solution {
         }
 
         if (total >= 0) {
-            idx[j] = start; // store the valid start index
-            count++;
+            idx[0] = start; // store the valid start index
             return idx[0];
         } else {
             return -1;

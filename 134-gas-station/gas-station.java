@@ -1,11 +1,9 @@
 class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length;
-        int idx[] = new int[n];
         int total = 0;   // overall balance of gas
         int tank = 0;    // current tank balance
-        int count = 0;
-        int start = 0;   // candidate start index
+        int start = 0;  // candidate start index
 
         for (int i = 0; i < n; i++) {
             int diff = gas[i] - cost[i];
@@ -20,8 +18,7 @@ class Solution {
         }
 
         if (total >= 0) {
-            idx[0] = start; // store the valid start index
-            return idx[0];
+            return start;
         } else {
             return -1;
         }

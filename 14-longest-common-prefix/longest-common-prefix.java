@@ -2,7 +2,7 @@ class Solution {
     public String longestCommonPrefix(String[] strs) {
         int n = strs.length;
         int length = Integer.MAX_VALUE;
-        if(n==1 && strs[0].length()>0){
+        if(n==1){
            return strs[0];
         }
         for(int i = 0; i<n-1;i++){

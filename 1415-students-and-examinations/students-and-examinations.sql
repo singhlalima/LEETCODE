@@ -2,7 +2,7 @@
 SELECT s1.student_id, 
        s1.student_name, 
        s.subject_name, 
-       COUNT(e.subject_name) AS attended_exams
+       COUNT(e.student_id) AS attended_exams
 FROM students AS s1
 CROSS JOIN subjects  AS s
 LEFT JOIN examinations AS e

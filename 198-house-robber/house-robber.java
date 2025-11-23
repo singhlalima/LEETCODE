@@ -17,12 +17,9 @@ class Solution {
             b=ans[i];
             i--;
         }
-        Arrays.sort(ans);
-        if(n==3){
-            Arrays.sort(nums);
-            return Math.max(ans[n-1],nums[n-1]);
-        }
-        return ans[n-1];
+
+        
+        return Math.max(ans[0],Math.max(a,b));
         
         
     }

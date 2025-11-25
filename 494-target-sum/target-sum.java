@@ -16,7 +16,7 @@ class Solution {
                 dp[i][j] = dp[i - 1][j];     // not take nums[i-1]
 
                 if (nums[i - 1] <= j) {
-                    dp[i][j] += dp[i - 1][j - nums[i - 1]];  // take nums[i-1]
+                    dp[i][j] = dp[i - 1][j - nums[i - 1]] + dp[i-1][j];  // take nums[i-1]
                 }
             }
         }

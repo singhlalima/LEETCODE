@@ -17,15 +17,16 @@ class Solution {
                 if (map.get(ransomNote.charAt(i)) == 0) {
                     map.remove(ransomNote.charAt(i));
                 }
-            }
+            }else
+            return false;
 
         }
        
-        if (count == ransomNote.length())
+        if (count == ransomNote.length()){
             return true;
-        else
-            return false;
-
+        }
+        return false;
+       
     }
 
 }
